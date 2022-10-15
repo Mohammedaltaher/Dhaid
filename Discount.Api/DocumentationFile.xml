@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Discount.Api</name>
+    </assembly>
+    <members>
+        <member name="P:Discounts.Api.Controllers.BaseApiController.Mediator">
+            <summary>
+            Get Mediator 
+            </summary>
+        </member>
+        <member name="M:Discounts.Api.Controllers.DiscountController.Create(Application.Features.Discounts.Commands.CreateDiscountCommand)">
+            <summary>
+            Creates a New Discount.
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Discounts.Api.Controllers.DiscountController.GetAll(Application.Features.Discounts.Queries.GetAllDiscountQuery)">
+            <summary>
+            Gets all Discount.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Discounts.Api.Controllers.DiscountController.GetById(System.Int32)">
+            <summary>
+            Gets Discount by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Discounts.Api.Controllers.DiscountController.Delete(System.Int32)">
+            <summary>
+            Deletes Discount  based on Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Discounts.Api.Controllers.DiscountController.Update(System.Int32,Application.Features.Discounts.Commands.UpdateDiscountCommand)">
+            <summary>
+            Updates the Discount  based on Id.   
+            </summary>
+            <param name="id"></param>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Discounts.Api.Controllers.ErrorController.ErrorLocalDevelopment(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Development error
+            </summary>
+            <param name="webHostEnvironment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Discounts.Api.Controllers.ErrorController.Error">
+            <summary>
+            Live Error
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

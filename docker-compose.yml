@@ -1,0 +1,51 @@
+version: '3.4'
+
+services:
+  order.api:
+    container_name: order_api
+    image: ${DOCKER_REGISTRY-}orderapi
+    build:
+      context: .
+      dockerfile: Order.Api/Dockerfile
+    networks:
+            - common_network
+  service.api:
+    container_name: service_api
+    image: ${DOCKER_REGISTRY-}serviceapi
+    build:
+      context: .
+      dockerfile: Service.Api/Dockerfile
+    networks:
+            - common_network
+  discount.api:
+    container_name: discount_api
+    image: ${DOCKER_REGISTRY-}discountapi
+    build:
+      context: .
+      dockerfile: Discount.Api/Dockerfile
+    networks:
+      - common_network
+  apigateway:
+    container_name: api_gateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    networks:
+            - common_network
+  consul.client:
+    container_name: consul_client
+    image: consul:latest
+    command: consul agent -dev -log-level=warn -ui -client=0.0.0.0
+    hostname: consul
+    networks:
+            - common_network
+  sqlserverdb:
+    container_name: sqlserver_db
+    image: "mcr.microsoft.com/mssql/server:2017-latest"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=1Secure*Password1
+networks:
+   common_network:
+      driver: bridge

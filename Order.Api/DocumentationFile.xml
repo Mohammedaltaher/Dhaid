@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Order.Api</name>
+    </assembly>
+    <members>
+        <member name="P:WebApi.Controllers.BaseApiController.Mediator">
+            <summary>
+            Get Mediator 
+            </summary>
+        </member>
+        <member name="M:WebApi.Controllers.ErrorController.ErrorLocalDevelopment(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Development error
+            </summary>
+            <param name="webHostEnvironment"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.ErrorController.Error">
+            <summary>
+            Live Error
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.OrderController.Create(Application.Features.Orders.Commands.CreateOrderCommand)">
+            <summary>
+            Creates a New Order.
+            </summary>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.OrderController.GetAll(Application.Features.Orders.Queries.GetAllOrderQuery)">
+            <summary>
+            Gets all Order.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.OrderController.GetById(System.Int32)">
+            <summary>
+            Gets Order by Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.OrderController.Delete(System.Int32)">
+            <summary>
+            Deletes Order  based on Id.
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:WebApi.Controllers.OrderController.Update(System.Int32,Application.Features.Orders.Commands.UpdateOrderCommand)">
+            <summary>
+            Updates the Order  based on Id.   
+            </summary>
+            <param name="id"></param>
+            <param name="command"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
